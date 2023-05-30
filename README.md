@@ -2,7 +2,11 @@
 Необходимо разработать тестовое одностраничное web-приложение. Весь ваш код поместитить в один файл index.html. Файл должен нормально открываться на ОС Windows. Все внешние зависимости (JQuery, Bootstrap и прочее) подключать из облачных CDN.
 
 Допускается использовать стандартные возможности JavaScript + JQuery, Bootstrap 5, Chart.js.
-Для обращаения к API использовать функцию fetch. Описание API и примерные скриншоты результата в конце задания.
+Для обращаения к API использовать функцию fetch.
+
+**Описание API - в конце задания.**
+
+**Примерные скриншоты результата лежат в этом репозитории.**
 
 Итоговый файл index.html выложить в личный репозиторий на GitHub и прислать ссылку на него.
 
@@ -21,31 +25,31 @@
 
 # Описание API
 
-Запрос для получения всех приложений
-
+**Запрос для получения всех приложений**
+```
 POST /Face/App_List HTTP/1.1
 Host: checkstatus.website:8099
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
 
 ''
-
-Запрос для создания приложения
-
+```
+**Запрос для создания приложения**
+```
 POST /Face/New_app HTTP/1.1
 Host: checkstatus.website:8099
 Content-Type: application/json; charset=utf-8
 Content-Length: 124
 
 '{"app_id": "abc", "app_name": "test_app", "policy_id": 10, "agent_js_config": "123123", "correlations_config": "321321"}'
+```
 
-
-Запрос для изменения приложения (приложение определяется по строковому app_id)
-
+**Запрос для изменения приложения (приложение определяется по строковому app_id)**
+```
 POST /Face/Update_app HTTP/1.1
 Host: checkstatus.website:8099
 Content-Type: application/json; charset=utf-8
 Content-Length: 124
 
 '{"app_id": "abc", "app_name": "test_app", "policy_id": 11, "agent_js_config": "123123", "correlations_config": "321321"}'
-
+```
